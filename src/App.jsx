@@ -12,21 +12,16 @@ function App() {
     <BrowserRouter>
       
       <Routes>
+
         <Route Component={DefaultLayout}>
 
-
-        <Route path="/" Component={HomePage}/>
-        
-        <Route path="/products" Component={ProductsPage} />
-        
-        <Route path="/chisiamo"Component={ChiSiamoPage}/>
-
+          <Route path="/" Component={HomePage}/>
+          
+          <Route path="/products" Component={ProductsPage} />
+          
+          <Route path="/chisiamo" Component ={ChiSiamoPage}/>
 
         </Route>
-
-
-        
-
 
       </Routes>
     

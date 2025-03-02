@@ -1,3 +1,4 @@
+import MainProducts from './../components/productsMain/MainProducts';
 export default function ProductsPage() {
     
     return (
@@ -6,8 +7,7 @@ export default function ProductsPage() {
 
             <div className="container">
 
-                <h1>Questi sono i prodotti</h1>
-
+               < MainProducts/>
             </div>
 
         </main>

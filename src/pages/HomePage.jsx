@@ -5,7 +5,7 @@ export default function HomePage() {
         <main>
 
             <div className="container my-4">
-                <h1>Questa e la home</h1>
+                <h1>Questa e' la home</h1>
 
             </div>
         </main>
