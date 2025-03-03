@@ -11,32 +11,34 @@ export default function MainProducts() {
   }, []);
 
   return (
-    <div className="container ">
-      <div className="container d-flex my-3 justify-content-between"></div>
-
-      <div className="row row-cols-3 g-3 my-3">
-        {getPosts.map((c) => {
-          return (
-            <div className="col">
-              <NavLink
-                to={`/products/${c.id}`}
-                key={c.id}
-                className="card h-100"
-                style={{ width: "18rem" }}
-              >
-                <div className="card-body p-2">
-                  <h3 className="card-title  m-0">{c.title}</h3>
-                  <p>{c.content}</p>
+    <div className="container py-4">
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {getPosts.map((c) => (
+          <div className="col" key={c.id}>
+            <NavLink 
+              to={`/products/${c.id}`} 
+              className="text-decoration-none"
+            >
+              <div className="card h-100 shadow-sm hover-shadow">
+                <div className="card-body">
+                  <h3 className="card-title mb-3 text-primary">
+                    {c.title}
+                  </h3>
+                  <p className="card-text text-muted">
+                    {c.content}
+                  </p>
                 </div>
-              </NavLink>
-            </div>
-          );
-        })}
+                <div className="card-footer bg-transparent border-0">
+                  <span className=" text-warning">Click to view details</span>
+                </div>
+              </div>
+            </NavLink>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
-
 // // ! personaggi contenuti qua
 // const [getCharacters, setCharacters]= useState([])
 

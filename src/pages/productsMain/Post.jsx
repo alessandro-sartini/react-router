@@ -26,21 +26,21 @@ export default function Post() {
   return (
     <>
       <div className="container my-4">
-        <div className="container p-3">
-          <h1>Singolo prodotto: {id}</h1>
-        </div>
+        <div className="container">
+          {/* <h1>Singolo prodotto: {id}</h1> */}
 
-        <h2>Titolo: {getSiglePost.title}</h2>
+        <h2 className="text-center m-3 text-warning">Titolo: {getSiglePost.title}</h2>
 
-        <p>{getSiglePost.content}</p>
-        <ul>
+        <p  className="text-center m-3">{getSiglePost.content}</p>
+        <ul className="list-group my-5">
           {getSiglePost.tags.map((tag, id) => {
-            return <li key={id}>{tag}</li>;
+            return <li className="list-group-item" key={id}>{tag}</li>;
           })}
         </ul>
         <button className="btn btn-warning" onClick={() => navigate(-1)}>
           torna alla pagina precedente
         </button>
+        </div>
       </div>
     </>
   );
