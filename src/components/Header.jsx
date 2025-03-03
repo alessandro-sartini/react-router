@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import reactLogo from"../assets/react.svg"
 export default function Header(){
 
@@ -8,11 +8,11 @@ export default function Header(){
 
 
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <NavLink className="navbar-brand m-2" to="/">
+                <Link className="navbar-brand m-2" to="/">
                     
                     <img src={reactLogo} alt="React Logo" width="30" height="24" />
 
-                </NavLink>
+                </Link>
                 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
