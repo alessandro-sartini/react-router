@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 export default function Post() {
   const {id} = useParams();
-  const apiUrl = "http://localhost:3000/api/posts";
+  const apiUrl = import.meta.env.VITE_URL_API_POSTS;
 
   const [getSiglePost, setSinglePost] = useState({
     id: "",

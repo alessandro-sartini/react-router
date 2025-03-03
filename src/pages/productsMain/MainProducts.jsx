@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function MainProducts() {
-  // const apiUrl = import.meta.env.URL_API_POSTS;
-  const apiUrl = "http://localhost:3000/api/posts";
+  const apiUrl = import.meta.env.VITE_URL_API_POSTS;
   const [getPosts, setPosts] = useState([]);
 
   useEffect(() => {

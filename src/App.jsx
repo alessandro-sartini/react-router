@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
-import ProductsPage from "./pages/ProductsPage";
+import ProductsPage from "./pages/productsMain/MainProducts";
 import ChiSiamoPage from "./pages/ChiSiamoPage";
-import Post from "./components/productsMain/Post";
+import Post from "./pages/productsMain/Post"
 
 function App() {
   return (
