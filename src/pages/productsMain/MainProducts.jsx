@@ -14,7 +14,7 @@ export default function MainProducts() {
     <div className="container ">
       <div className="container d-flex my-3 justify-content-between"></div>
 
-      <div className="row row-cols-4 g-3 my-3">
+      <div className="row row-cols-3 g-3 my-3">
         {getPosts.map((c) => {
           return (
             <div className="col">
@@ -26,6 +26,7 @@ export default function MainProducts() {
               >
                 <div className="card-body p-2">
                   <h3 className="card-title  m-0">{c.title}</h3>
+                  <p>{c.content}</p>
                 </div>
               </NavLink>
             </div>
