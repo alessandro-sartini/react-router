@@ -4,23 +4,31 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/productsMain/MainProducts";
 import ChiSiamoPage from "./pages/ChiSiamoPage";
-import Post from "./pages/productsMain/Post"
+import Post from "./pages/productsMain/Post";
+
+//context
+import { GlobalProvider } from "./context/GlobalContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route Component={DefaultLayout}>
-          <Route path="/" Component={HomePage} />
 
-          <Route path="/products" Component={ProductsPage} />
+    <GlobalProvider>
+    
+      <BrowserRouter>
+        <Routes>
+          <Route Component={DefaultLayout}>
+            <Route path="/" Component={HomePage} />
 
-          <Route path="/chisiamo" Component={ChiSiamoPage} />
+            <Route path="/products" Component={ProductsPage} />
 
-          <Route path="/products/:id" Component={Post}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            <Route path="/chisiamo" Component={ChiSiamoPage} />
+
+            <Route path="/products/:id" Component={Post}/>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    
+    </GlobalProvider>
   );
 }
 

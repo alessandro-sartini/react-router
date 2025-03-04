@@ -2,12 +2,17 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
+import { useGlobalContext } from "../../context/GlobalContext";
+
 export default function MainProducts() {
-  const apiUrl = import.meta.env.VITE_URL_API_POSTS;
-  const [getPosts, setPosts] = useState([]);
+  // const apiUrl = import.meta.env.VITE_URL_API_POSTS;
+  // const [getPosts, setPosts] = useState([]);
+
+   const { getPosts, fetchData } = useGlobalContext()
 
   useEffect(() => {
-    axios.get(apiUrl).then((res) => setPosts(res.data));
+    fetchData();
+    // axios.get(apiUrl).then((res) => setPosts(res.data));
   }, []);
 
   return (
@@ -39,7 +44,9 @@ export default function MainProducts() {
     </div>
   );
 }
-// // ! personaggi contenuti qua
+
+
+// ! personaggi contenuti qua
 // const [getCharacters, setCharacters]= useState([])
 
 // const [page, setPage] = useState(1);
