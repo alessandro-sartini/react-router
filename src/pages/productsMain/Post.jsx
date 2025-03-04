@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams,  useNavigate } from "react-router-dom";
 
@@ -6,6 +6,7 @@ import { useParams,  useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../context/GlobalContext";
 
 export default function Post() {
+
   const { id } = useParams();
   // const apiUrl = import.meta.env.VITE_URL_API_POSTS;
 
