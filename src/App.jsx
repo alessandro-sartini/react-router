@@ -13,22 +13,23 @@ function App() {
   return (
 
     <GlobalProvider>
-    
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
+            
             <Route path="/" Component={HomePage} />
-
-            <Route path="/products" Component={ProductsPage} />
 
             <Route path="/chisiamo" Component={ChiSiamoPage} />
 
-            <Route path="/products/:id" Component={Post}/>
+            <Route path="/products" Component={ProductsPage} />
+            
+            <Route path="/products/:id" Component={Post} />
+            
           </Route>
         </Routes>
       </BrowserRouter>
-    
     </GlobalProvider>
+    
   );
 }
 
